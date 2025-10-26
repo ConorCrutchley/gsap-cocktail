@@ -1,75 +1,30 @@
-# React + TypeScript + Vite
+# GSAP Cocktail
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This website was built as part of a follow along video tutorial from JavaScript Mastery which can be found at:
 
-Currently, two official plugins are available:
+https://www.youtube.com/watch?v=AW1yfBKRMKc
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The course teaches you how to use Green Sock Animation Platform (AKA GSAP) to implement stunning animations onto your website.
 
-## React Compiler
+The premise here is a cocktail website for a bar in America. GSAP is used to do the following:
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Play the video of ice falling into a cocktail glass as the user scrolls
+- Add a paralax effect to the leaves on the screen
+- Fade words, characters and lines into view as the user enters different sections of the page
+- Add an image mask that expands into a full image when the user scrolls further down the page
+- Provide transitions when navigating from one cocktail to another in the menu section
 
-Note: This will impact Vite dev & build performances.
+## Tools
 
-## Expanding the ESLint configuration
+The site was built using the latest versions of React, Vite and GSAP. It also uses TypeScript as opposed to JavaScript which was used in the tutorial.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## To Do
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The site is complete and matchaes the end product of the tutorial. However, there are some changes which could be made to improve the site. Thes include:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Updating the cocktail list. One of my hobbies is making cocktails and some of the cocktails mentioned on this page don't match the imagery. More accurate cocktail names / images would be more appropriate.
+- Change to British currency and details to make it more unique and clear it's something I've built.
+- Improve scrolling effect on some of the leaves.
+- Attempt to make the video in the hero section stand out more instead of appearing behind the noisy background.
+- Add links where the user can click the email address/phone number to email/call the bar.
+- See if there are more GSAP animations that could be added to this site.
