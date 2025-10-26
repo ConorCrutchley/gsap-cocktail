@@ -151,7 +151,7 @@ const Menu = () => {
           <button
             className="text-right"
             onClick={() => {
-              goToSlide(currentIndex - 1);
+              goToSlide(currentIndex + 1);
             }}
           >
             <span>{nextCocktail.name}</span>
