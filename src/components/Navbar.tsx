@@ -12,7 +12,7 @@ const Navbar = () => {
     });
 
     navTween.fromTo(
-      "nav",
+      "#navbar",
       {
         backgroundColor: "transparent",
       },
@@ -25,7 +25,7 @@ const Navbar = () => {
     );
   }, []);
   return (
-    <nav>
+    <nav id="navbar">
       <div>
         <a href="#home" className="flex items-center gap-2">
           <img src="/images/logo.png" alt="Purple cocktail glass logo" />
