@@ -10,14 +10,16 @@ const Menu = () => {
   // Ref, state and total cocktails
   const contentRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [previousIndex, setPreviousIndex] = useState(0);
   const totalCocktails = sliderLists.length;
 
   // Animate navigation between cocktails
   useGSAP(() => {
+    const xPercent = previousIndex < currentIndex ? -100 : 100;
     gsap.fromTo("#title", { opacity: 0 }, { opacity: 1, duration: 1 });
     gsap.fromTo(
       ".cocktail img",
-      { opacity: 0, xPercent: -100 },
+      { opacity: 0, xPercent },
       { opacity: 1, xPercent: 0, duration: 1, ease: "power1.inOut" }
     );
     gsap.fromTo(
@@ -27,6 +29,7 @@ const Menu = () => {
     );
   }, [currentIndex]);
 
+  // Animate leaves
   useGSAP(() => {
     const leftLeafTimeline = gsap.timeline({
       scrollTrigger: {
@@ -65,10 +68,18 @@ const Menu = () => {
 
   /**
    * Goes to the slide at the given index, wrapping around if necessary.
+   * Determines which direction to go based on the previous and current index.
    * @param {number} index - The index of the slide to go to.
    */
   const goToSlide = (index: number) => {
     const newIndex = (index + totalCocktails) % totalCocktails;
+    const prevIndex =
+      index === totalCocktails && newIndex === 0
+        ? -1
+        : index === -1 && newIndex === totalCocktails - 1
+        ? totalCocktails
+        : currentIndex;
+    setPreviousIndex(prevIndex);
     setCurrentIndex(newIndex);
   };
 
