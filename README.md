@@ -23,7 +23,6 @@ The site was built using the latest versions of React, Vite and GSAP. It also us
 The site is complete and matchaes the end product of the tutorial. However, there are some changes which could be made to improve the site. Thes include:
 
 - Updating the cocktail list. One of my hobbies is making cocktails and some of the cocktails mentioned on this page don't match the imagery. More accurate cocktail names / images would be more appropriate.
-- Change to British currency and details to make it more unique and clear it's something I've built.
 - Improve scrolling effect on some of the leaves.
 - Attempt to make the video in the hero section stand out more instead of appearing behind the noisy background.
 - Add links where the user can click the email address/phone number to email/call the bar.
