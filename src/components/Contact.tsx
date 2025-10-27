@@ -59,12 +59,16 @@ const Contact = () => {
         <h2>Where to Find Us</h2>
         <div>
           <h3>Visit Our Bar</h3>
-          <p>456, Raq Blvd. #404, Los Angeles, CA 90210</p>
+          <p>123 New Street, Birmingham, B2 1AA</p>
         </div>
         <div>
           <h3>Contact Us</h3>
-          <p>(555) 987-6543</p>
-          <p>hello@jsmcocktail.com</p>
+          <p>
+            <a href="tel:+44123456789">+44 123 456 789</a>
+          </p>
+          <p>
+            <a href="mailto:hello@velvetpour.com">hello@velvetpour.com</a>
+          </p>
         </div>
         <div>
           <h3>Open Every Day</h3>
